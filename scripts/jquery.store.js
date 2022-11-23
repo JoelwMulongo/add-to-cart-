@@ -28,6 +28,7 @@ $.noConflict();
 			this.jQueryemptyCartBtn = this.jQueryshoppingCartActions.find( "#empty-cart" ); // Empty cart button
 			this.jQueryuserDetails = this.jQueryelement.find( "#user-details-content" ); // Element that displays the user information
 			this.jQuerypaypalForm = this.jQueryelement.find( "#paypal-form" ); // PayPal form
+			this.jQuerywhatsappForm = this.jQueryelement.find( "#whatsapp-form" ); // whatsapp form
 			
 			
 			this.currency = "&#8377;"; // HTML entity of the currency to be displayed in the layout
@@ -59,7 +60,7 @@ $.noConflict();
 			this.deleteProduct();
 			this.displayUserDetails();
 			this.populatePayPalForm();
-			
+			this.populatewhatsappForm();
 			
 		},
 		
