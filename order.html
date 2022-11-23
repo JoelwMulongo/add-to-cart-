@@ -58,7 +58,19 @@
 
 </form>
 <li>
-<form id="WhatsApp-form" action="https://wa.me/+254743888406?text=${encodeURIComponent(message)}" method="post">
+<form id="WhatsApp-form" action="https://wa.me/+254743888406?text=${
+<script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                var x = $("form").serializeArray();
+                $.each(x, function(i, field) {
+                    $("#output").append(field.name + ":"
+                            + field.value + " ");
+                });
+            });
+        });
+    </script>
+}" method="post">
 	<input type="hidden" name="cmd" value="_cart" />
 	<input type="hidden" name="upload" value="1" />
 	<input type="hidden" name="business" value="" />
