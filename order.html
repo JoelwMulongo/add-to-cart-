@@ -48,7 +48,7 @@
 	<input type="submit" id="paypal-btn" class="btn" value="Pay with PayPal" />
 </form>
 <li>
-<form id="WhatsApp-form" action=" " method="post">
+<form id="WhatsApp-form" method="post">
 	<input type="hidden" name="cmd" value="_cart" />
 	<input type="hidden" name="upload" value="1" />
 	<input type="hidden" name="business" value="" />
@@ -60,14 +60,11 @@
 </div>
 	<script type="text/javascript">
 		$(document).on('click','.send', function(){
-			/* Inputan Formulir */
-			var input_name 			= $("#name").val(),
-			    input_email 		= $("#email").val(),
-			    input_phone 		= $("#phone").val(),
-                            input_jumlah                = $("#jumlah").val(),
-			    input_product 		= $("#product").val(),
-			    input_description 		= $("#description").val();
-
+			/*  */
+			var Item		= $("#Item").val(),
+			    Qty 		= $("#Qty").val(),
+                            Price                = $("#Price").val(),
+			    
 			/* Pengaturan Whatsapp */
 			var walink 		= 'https://web.whatsapp.com/send',
 			    phone 		= '254743888406',
@@ -80,15 +77,13 @@
 				var walink = 'whatsapp://send';
 			}
 
-			if(input_name != "" && input_phone != "" && input_product != ""){
+			if(Item != "" && Qty != "" && Price != ""){
 				/* Whatsapp URL */
 				var checkout_whatsapp = walink + '?phone=' + phone + '&text=' + text + '%0A%0A' +
-				    '*Nama* : ' + input_name + '%0A' +
-				    '*Alamat Email* : ' + input_email + '%0A' +
-				    '*Nomor Kontak / Whatsapp* : ' + input_phone + '%0A' +
-				    '*Jumlah Barang* : ' + input_jumlah + '%0A' +
-				    '*Pembayaran* : ' + input_product + '%0A' +
-				    '*Alamat* : ' + input_description + '%0A';
+				    '*Item* : ' + Item + '%0A' +
+				    '*Qty* : ' + Qty + '%0A' +
+				    '*Price* : ' + Price + '%0A' +
+				    
 
 				/* Whatsapp Window Open */
 				window.open(checkout_whatsapp,'_blank');
