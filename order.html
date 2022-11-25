@@ -58,41 +58,7 @@
 	</li>	 
 	</div>
 </div>
-	<script type="text/javascript">
-		$(document).on('click','.send', function(){
-			/*  */
-			var Item		= $("#Item").val(),
-			    Qty 		= $("#Qty").val(),
-                            Price                = $("#Price").val(),
-			    
-			/* Pengaturan Whatsapp */
-			var walink 		= 'https://web.whatsapp.com/send',
-			    phone 		= '254743888406',
-			    text 		= ' ',
-			    text_yes		= '',
-			    text_no 		= '';
-
-			/* Smartphone Support */
-			if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-				var walink = 'whatsapp://send';
-			}
-
-			if(Item != "" && Qty != "" && Price != ""){
-				/* Whatsapp URL */
-				var checkout_whatsapp = walink + '?phone=' + phone + '&text=' + text + '%0A%0A' +
-				    '*Item* : ' + Item + '%0A' +
-				    '*Qty* : ' + Qty + '%0A' +
-				    '*Price* : ' + Price + '%0A' +
-				    
-
-				/* Whatsapp Window Open */
-				window.open(checkout_whatsapp,'_blank');
-				document.getElementById("text-info").innerHTML = '<div class="alert alert-success">'+text_yes+'</div>';
-			} else {
-				document.getElementById("text-info").innerHTML = '<div class="alert alert-danger">'+text_no+'</div>';
-			}
-		});
-	</script>
+	
 <footer id="site-info">
 		Copyright &copy; my Store 2022 <br> Made; By joelwmulongo
 	</footer>
