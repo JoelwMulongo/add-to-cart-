@@ -2,7 +2,8 @@
 js add to cart function
 <p>
 English | <a href="https://github.com/JoelwMulongo/add-to-cart-/blob/main/README_swa.md">Swahili</a>
-</p>
+</p> 
+
 [![](https://badgen.net/badge/JoelMulongo/gitlab/orange?icon=terminal)](https://gitlab.com/users/Joelwmulongo/projects)
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/joelwmulongo/add-to-cart-)
